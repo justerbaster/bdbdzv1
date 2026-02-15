@@ -1,0 +1,1204 @@
+/**
+ * Bonzi-стиль для вашего сайта
+ * Подключайте: <link rel="stylesheet" href="styles/bonzi-theme.css">
+ */
+
+:root {
+  /* Цвета в стиле Bonzi */
+  --bonzi-purple-dark:   #3d1560;
+  --bonzi-purple:       #4a1a6b;
+  --bonzi-purple-mid:   #5a3d7a;
+  --bonzi-purple-light: #6b3d9e;
+  --bonzi-lavender:     #7b5a9e;
+  --bonzi-lavender-bg:  #8b5cbf;
+  --bonzi-lavender-soft:#9b6cc9;
+  --bonzi-text:         #e6d5f5;
+  --bonzi-text-muted:   #c9b8e0;
+  --bonzi-gold:         #ffd700;
+  --bonzi-gold-dark:    #e6a800;
+  --bonzi-white:        #fff;
+
+  /* Фоны */
+  --bonzi-bg:           #4a1a6b;
+  --bonzi-bg-gradient:  linear-gradient(180deg, #6b3d9e 0%, #4a1a6b 50%, #3d1560 100%);
+  --bonzi-card-bg:      linear-gradient(180deg, #6b3d9e 0%, #4a1a6b 100%);
+  --bonzi-card-border:  #8b5cbf;
+
+  /* Шрифты (в духе эпохи, но читаемые) */
+  --bonzi-font:         "Segoe UI", Arial, Helvetica, sans-serif;
+  --bonzi-font-size:    16px;
+  --bonzi-radius:       8px;
+  --bonzi-shadow:       0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Плавная прокрутка по якорям */
+html { scroll-behavior: smooth; }
+
+/* Базовое применение темы к странице */
+.bonzi-theme,
+.bonzi-theme body {
+  font-family: var(--bonzi-font);
+  font-size: var(--bonzi-font-size);
+  color: var(--bonzi-text);
+  background: var(--bonzi-bg);
+  background-image: 
+    var(--bonzi-bg-gradient),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30 Q15 20 30 30 T60 30' stroke='%236b3d9e' fill='none' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E");
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Карточка / блок контента в стиле Bonzi */
+.bonzi-card {
+  background: var(--bonzi-card-bg);
+  border: 4px solid var(--bonzi-card-border);
+  border-radius: var(--bonzi-radius);
+  padding: 1.5rem 2rem;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.2), var(--bonzi-shadow);
+}
+
+/* Заголовки */
+.bonzi-theme h1, .bonzi-theme .bonzi-title {
+  color: var(--bonzi-gold);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-weight: bold;
+}
+
+.bonzi-theme h2, .bonzi-theme .bonzi-subtitle {
+  color: var(--bonzi-text);
+}
+
+.bonzi-theme a {
+  color: var(--bonzi-gold);
+}
+.bonzi-theme a:hover {
+  color: var(--bonzi-text);
+}
+
+/* Разделитель в стиле Bonzi */
+.bonzi-sep {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--bonzi-lavender-bg), var(--bonzi-gold), var(--bonzi-lavender-bg), transparent);
+  margin: 1.25rem 0;
+  border: none;
+  border-radius: 2px;
+}
+
+/* Кнопки в стиле Bonzi (если понадобятся) */
+.bonzi-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(180deg, #ffcc00 0%, #e6a800 50%, #cc8800 100%);
+  color: #331a00;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--bonzi-white);
+  border-radius: var(--bonzi-radius);
+  box-shadow: 0 3px 0 #996600, var(--bonzi-shadow);
+}
+
+.bonzi-btn:hover {
+  background: linear-gradient(180deg, #ffdd22 0%, #f0b800 100%);
+}
+
+/* Контейнер с маскотом */
+.bonzi-mascot-wrap {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bonzi-mascot-wrap img,
+.bonzi-mascot-wrap .bonzi-mascot-svg {
+  display: block;
+  height: auto;
+  max-height: 200px;
+  width: auto;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+}
+
+/* Размеры маскота для разных мест */
+.bonzi-mascot-wrap.bonzi-mascot--small img,
+.bonzi-mascot-wrap.bonzi-mascot--small .bonzi-mascot-svg { max-height: 100px; }
+.bonzi-mascot-wrap.bonzi-mascot--large img,
+.bonzi-mascot-wrap.bonzi-mascot--large .bonzi-mascot-svg { max-height: 280px; }
+.bonzi-mascot-wrap.bonzi-mascot--hero img,
+.bonzi-mascot-wrap.bonzi-mascot--hero .bonzi-mascot-svg { max-height: 320px; }
+
+/* ========== Лендинг ========== */
+.bonzi-landing {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+}
+
+.bonzi-hero {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+}
+.bonzi-hero .bonzi-mascot-wrap {
+  margin-bottom: 1rem;
+}
+.bonzi-hero h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+.bonzi-hero .hero-tagline {
+  font-size: 1.15rem;
+  color: var(--bonzi-text-muted);
+  margin: 0 0 1.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bonzi-hero .bonzi-btn {
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
+}
+
+.bonzi-section {
+  margin-bottom: 2.5rem;
+}
+.bonzi-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  color: var(--bonzi-gold);
+}
+
+.bonzi-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.bonzi-feature {
+  background: var(--bonzi-card-bg);
+  border: 3px solid var(--bonzi-card-border);
+  border-radius: var(--bonzi-radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.15), var(--bonzi-shadow);
+}
+.bonzi-feature-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  background: var(--bonzi-purple-mid);
+  border: 2px solid var(--bonzi-lavender-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+.bonzi-feature h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--bonzi-gold);
+}
+.bonzi-feature p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--bonzi-text);
+  line-height: 1.45;
+}
+
+.bonzi-cta-block {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--bonzi-card-bg);
+  border: 4px solid var(--bonzi-gold);
+  border-radius: var(--bonzi-radius);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.2), var(--bonzi-shadow);
+}
+.bonzi-cta-block h2 {
+  margin: 0 0 0.5rem;
+  color: var(--bonzi-gold);
+}
+.bonzi-cta-block p {
+  margin: 0 0 1.5rem;
+  color: var(--bonzi-text-muted);
+}
+.bonzi-cta-block .bonzi-btn {
+  margin: 0;
+}
+
+.bonzi-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--bonzi-purple-mid);
+  color: var(--bonzi-text-muted);
+  font-size: 0.9rem;
+}
+.bonzi-footer a {
+  color: var(--bonzi-lavender-soft);
+}
+.bonzi-footer a:hover {
+  color: var(--bonzi-gold);
+}
+
+/* ========== BonziWORLD — стиль окон Windows 98 (как File Finder) ========== */
+/* Система 3D: только границы 1px. Выпукло = светлая верх/лево. Утоплено = тёмная верх/лево. */
+.bonziworld {
+  --w:   #ffffff;
+  --w2:  #dfdfdf;
+  --g:   #c0c0c0;
+  --g2:  #808080;
+  --g3:  #404040;
+  --jungle-green:   #2d5a27;
+  --jungle-dark:    #1e4620;
+  --link-green:     #228b22;
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+}
+
+.bonzi-theme.bonziworld,
+.bonzi-theme.bonziworld body {
+  background: #008080;
+  color: #000;
+}
+
+/* Рамка окна: выпуклая (светлая верх/лево, тёмная низ/право) */
+.bonziworld .bw-window {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--g);
+  overflow: hidden;
+  border: 2px solid;
+  border-color: var(--w) var(--g2) var(--g2) var(--w);
+  box-shadow: 1px 1px 0 var(--w2);
+}
+
+/* Заголовок: синяя полоса, белый текст */
+.bonziworld .bw-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #58b4e8 100%);
+  color: #fff;
+  padding: 2px 2px 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.bonziworld .bw-title-bar .bw-title-icon {
+  flex-shrink: 0;
+  height: 28px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+.bonziworld .bw-title-bar .bw-title-text { flex: 1; margin-left: 2px; }
+
+/* Кнопки − □ ×: серые, выпуклые (светлая верх/лево), чёрные символы */
+.bonziworld .bw-title-bar .bw-win-buttons { display: flex; gap: 0; }
+.bonziworld .bw-title-bar .bw-win-btn {
+  width: 21px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid;
+  border-color: var(--w) var(--g2) var(--g2) var(--w);
+  background: var(--g);
+  color: #000;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.bonziworld .bw-title-bar .bw-win-btn:hover { background: #d4d4d4; }
+.bonziworld .bw-title-bar .bw-win-btn:active {
+  border-color: var(--g2) var(--w) var(--w) var(--g2);
+  background: #a0a0a0;
+}
+
+/* Зелёный баннер */
+.bonziworld .bw-jungle-banner {
+  background: linear-gradient(180deg, #3a6b32 0%, var(--jungle-green) 50%, var(--jungle-dark) 100%);
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid #1a3a1a;
+}
+.bonziworld .bw-jungle-banner .bw-wood-btn { padding: 2px 8px; font-size: 11px; }
+.bonziworld .bw-jungle-banner a.bw-wood-btn { text-decoration: none; color: #000; }
+
+/* Тулбар */
+.bonziworld .bw-toolbar {
+  background: var(--g);
+  padding: 4px 10px;
+  border-bottom: 1px solid var(--g2);
+  display: flex;
+  align-items: center;
+}
+.bonziworld .bw-toolbar .bw-logo { font-weight: bold; font-size: 13px; color: #000; }
+
+/* Тело */
+.bonziworld .bw-body { display: flex; min-height: 400px; }
+
+/* Сайдбар: утопленная правая грань */
+.bonziworld .bw-sidebar {
+  width: 130px;
+  min-width: 130px;
+  background: var(--g);
+  padding: 8px 6px;
+  border-right: 2px solid;
+  border-right-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Кнопки сайдбара: выпуклые */
+.bonziworld .bw-wood-btn {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--w) var(--g2) var(--g2) var(--w);
+  color: #000;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bonziworld .bw-wood-btn:hover { background: #d4d4d4; }
+.bonziworld .bw-wood-btn:active {
+  border-color: var(--g2) var(--w) var(--w) var(--g2);
+  background: #a0a0a0;
+}
+
+.bonziworld .bw-sidebar-icons {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #000;
+}
+.bonziworld .bw-sidebar-icons .bw-icon-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Основная область: одна серая плоскость, контент в утопленной панели ниже вкладок */
+.bonziworld .bw-main {
+  flex: 1;
+  background: var(--g);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Вкладки: активная — выпуклая и сливается с контентом, неактивные — утопленные */
+.bonziworld .bw-main-tabs {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 4px 8px 0 8px;
+  flex-wrap: wrap;
+}
+
+.bonziworld .bw-tab {
+  padding: 4px 12px 6px;
+  margin: 0 1px 0 0;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--g2) transparent var(--w2);
+  border-bottom: none;
+  font-size: 11px;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+.bonziworld .bw-tab.active {
+  padding: 4px 12px 7px;
+  border-color: var(--w) var(--g2) var(--g) var(--w);
+  border-bottom: 1px solid var(--g);
+  background: var(--g);
+  margin-bottom: -1px;
+  font-weight: bold;
+}
+
+/* Контент под вкладками — одна утопленная панель (как в File Finder) */
+.bonziworld .bw-main-content {
+  flex: 1;
+  margin: 0 8px 8px 8px;
+  padding: 12px;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bonziworld .bw-main .bw-share-text {
+  font-size: 11px;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+/* Tab panels: show/hide */
+.bonziworld .bw-panel {
+  display: block;
+}
+.bonziworld .bw-panel.bw-panel-hidden {
+  display: none;
+}
+
+/* Ask Me To... panel */
+.bonziworld .bw-ask-wrap {
+  padding: 8px 0;
+}
+.bonziworld .bw-ask-title {
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+.bonziworld .bw-ask-desc {
+  font-size: 11px;
+  color: #000;
+  margin: 0 0 12px 0;
+}
+.bonziworld .bw-ask-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.bonziworld .bw-ask-voice-btn {
+  white-space: nowrap;
+}
+.bonziworld .bw-ask-voice-btn.bw-voice-active {
+  outline: 2px solid #c00;
+  outline-offset: 2px;
+}
+.bonziworld .bw-ask-voice-status {
+  font-size: 11px;
+  color: #666;
+  min-width: 140px;
+}
+.bonziworld .bw-ask-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  background: #fff;
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+}
+
+/* Chat area */
+.bonziworld .bw-ask-chat {
+  max-height: 320px;
+  min-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  background: var(--g3);
+  border: 1px solid;
+  border-color: var(--g2) var(--w) var(--w) var(--g2);
+}
+.bonziworld .bw-ask-chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 10px;
+}
+.bonziworld .bw-ask-msg {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 95%;
+}
+.bonziworld .bw-ask-msg.bw-msg-user {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+.bonziworld .bw-ask-msg.bw-msg-user .bw-ask-msg-bubble {
+  background: #d4e8f7;
+  border-color: #7eb8e3;
+}
+.bonziworld .bw-ask-msg-avatar {
+  flex-shrink: 0;
+}
+.bonziworld .bw-ask-msg.bw-msg-user .bw-ask-msg-avatar {
+  display: none;
+}
+.bonziworld .bw-ask-mascot {
+  width: 48px;
+  height: auto;
+}
+.bonziworld .bw-ask-msg-bubble {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.bonziworld .bw-ask-msg-bubble p {
+  margin: 0;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* Сетка обезьянок: колонки не уже минимума, чтобы текст был виден целиком */
+.bonziworld .bw-gorilla-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 10px;
+  flex: 1;
+}
+@media (max-width: 640px) {
+  .bonziworld .bw-gorilla-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+/* Ячейка: утопленная (тёмная верх/лево), текст не обрезать */
+.bonziworld .bw-gorilla-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  min-width: 0;
+  overflow: visible;
+}
+
+.bonziworld .bw-gorilla-cell img {
+  width: 80px;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.bonziworld .bw-gorilla-cell a,
+.bonziworld .bw-gorilla-cell span.bw-action {
+  font-size: 13px;
+  color: var(--link-green);
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: 100%;
+}
+
+.bonziworld .bw-gorilla-cell a:hover {
+  color: #1a6b1a;
+}
+
+/* Блок приветствия вверху контента */
+.bonziworld .bw-welcome-block {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.bonziworld .bw-welcome-block .bw-hero-mascot {
+  max-height: 280px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+.bonziworld .bw-welcome-block h1 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.bonziworld .bw-welcome-block p {
+  font-size: 13px;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.bonziworld .bw-welcome-block .bonzi-btn {
+  margin: 0;
+}
+
+/* Кнопка Bonzi: выпуклая */
+.bonziworld .bonzi-btn {
+  border-radius: 0;
+  border: 1px solid;
+  border-color: var(--w) var(--g2) var(--g2) var(--w);
+  background: var(--g);
+  color: #000;
+}
+.bonziworld .bonzi-btn:active {
+  border-color: var(--g2) var(--w) var(--w) var(--g2);
+  background: #a0a0a0;
+}
+
+/* Разделитель */
+.bonziworld .bw-hr {
+  border: none;
+  height: 0;
+  margin: 12px 0;
+  border-top: 1px solid var(--g2);
+  border-bottom: 1px solid var(--w2);
+}
+
+/* Панель CTA: утопленная */
+.bonziworld .bw-cta-panel {
+  text-align: center;
+  padding: 12px;
+  margin-top: 12px;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+}
+.bonziworld .bw-cta-panel h2 {
+  font-size: 1rem;
+  color: #000;
+  margin: 0 0 4px;
+}
+.bonziworld .bw-cta-panel p {
+  font-size: 11px;
+  color: #000;
+  margin: 0 0 8px;
+}
+
+/* Save You Money panel */
+.bonziworld .bw-money-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.bonziworld .bw-money-mascot {
+  flex-shrink: 0;
+  display: block;
+}
+.bonziworld .bw-money-side {
+  flex: 1;
+  min-width: 200px;
+}
+.bonziworld .bw-money-info {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: #000;
+}
+.bonziworld .bw-money-info dt {
+  font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.bonziworld .bw-money-info dt:first-child { margin-top: 0; }
+.bonziworld .bw-money-info dd {
+  margin: 0;
+  padding-left: 0;
+}
+.bonziworld .bw-money-info .bw-money-ca {
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 11px;
+}
+.bonziworld .bw-money-info a {
+  color: #000080;
+  text-decoration: underline;
+}
+.bonziworld .bw-money-info a:hover {
+  color: #1084d0;
+}
+.bonziworld .bw-money-text {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  line-height: 1.5;
+}
+.bonziworld .bw-money-chart-wrap {
+  margin-top: 16px;
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  padding: 0;
+  overflow: hidden;
+}
+.bonziworld .bw-money-chart-title {
+  background: var(--g3);
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid var(--g2);
+}
+.bonziworld .bw-money-chart {
+  height: 320px;
+  min-height: 280px;
+  background: #1a1a1a;
+  position: relative;
+}
+.bonziworld .bw-money-chart iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Status bar */
+.bonziworld .bw-footer-bar {
+  background: var(--g);
+  color: #000;
+  padding: 4px 10px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 2px solid;
+  border-top-color: var(--g2) var(--w2) var(--w2) var(--g2);
+}
+.bonziworld .bw-footer-bar a,
+.bonziworld .bw-footer-bar button {
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 11px;
+}
+.bonziworld .bw-footer-bar a:hover,
+.bonziworld .bw-footer-bar button:hover { color: #000080; }
+
+/* Calendar link in sidebar */
+.bonziworld .bw-calendar-btn {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bonziworld .bw-calendar-btn:hover { color: #000080; }
+
+/* Calendar: hidden by default, shown only when Calendar button is clicked */
+.bonziworld .bw-calendar-wrap.bw-calendar-hidden {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-calendar-open .bw-main-tabs,
+.bonziworld .bw-main.bw-main-calendar-open .bw-main-content,
+.bonziworld .bw-main.bw-main-calendar-open .bw-frame-wrap,
+.bonziworld .bw-main.bw-main-calendar-open .bw-download-wrap {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-calendar-open .bw-calendar-wrap {
+  display: block !important;
+}
+
+/* Docs: hidden by default, shown when Learn more is clicked */
+.bonziworld .bw-docs-wrap.bw-docs-hidden {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-docs-open .bw-main-tabs,
+.bonziworld .bw-main.bw-main-docs-open .bw-main-content,
+.bonziworld .bw-main.bw-main-docs-open .bw-calendar-wrap,
+.bonziworld .bw-main.bw-main-docs-open .bw-frame-wrap,
+.bonziworld .bw-main.bw-main-docs-open .bw-download-wrap {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-docs-open .bw-docs-wrap {
+  display: block !important;
+}
+
+/* Frame window (sidebar links: Entertainment, Sports, etc.) */
+.bonziworld .bw-frame-wrap.bw-frame-hidden {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-frame-open .bw-main-tabs,
+.bonziworld .bw-main.bw-main-frame-open .bw-main-content,
+.bonziworld .bw-main.bw-main-frame-open .bw-calendar-wrap,
+.bonziworld .bw-main.bw-main-frame-open .bw-docs-wrap,
+.bonziworld .bw-main.bw-main-frame-open .bw-download-wrap {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-frame-open .bw-frame-wrap {
+  display: block !important;
+}
+
+/* Download window (Get Started) */
+.bonziworld .bw-download-wrap.bw-download-hidden {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-download-open .bw-main-tabs,
+.bonziworld .bw-main.bw-main-download-open .bw-main-content,
+.bonziworld .bw-main.bw-main-download-open .bw-calendar-wrap,
+.bonziworld .bw-main.bw-main-download-open .bw-docs-wrap,
+.bonziworld .bw-main.bw-main-download-open .bw-frame-wrap {
+  display: none !important;
+}
+.bonziworld .bw-main.bw-main-download-open .bw-download-wrap {
+  display: block !important;
+}
+
+/* Bonzi's Calendar window (as in attachment) */
+.bonziworld .bw-calendar-wrap {
+  margin: 0 8px 8px 8px;
+}
+.bonziworld .bw-calendar-window {
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  padding: 0;
+  overflow: hidden;
+}
+.bonziworld .bw-calendar-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #58b4e8 100%);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.bonziworld .bw-calendar-intro {
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+  background: var(--g);
+  border-bottom: 1px solid var(--g2);
+}
+.bonziworld .bw-calendar-body {
+  display: flex;
+  min-height: 260px;
+}
+.bonziworld .bw-calendar-left {
+  flex: 1;
+  padding: 8px;
+  min-width: 0;
+  position: relative;
+}
+.bonziworld .bw-calendar-controls {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.bonziworld .bw-calendar-select {
+  padding: 2px 6px;
+  font-size: 11px;
+  background: #fff;
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  min-width: 80px;
+}
+.bonziworld .bw-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+}
+.bonziworld .bw-calendar-weekdays span {
+  text-align: center;
+  padding: 2px 0;
+}
+.bonziworld .bw-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+.bonziworld .bw-cal-day {
+  padding: 4px 2px;
+  text-align: center;
+  background: var(--g);
+  border: 1px solid transparent;
+  min-height: 22px;
+}
+.bonziworld .bw-cal-day.bw-cal-other {
+  color: var(--g2);
+}
+.bonziworld .bw-cal-day.bw-cal-today {
+  color: #c00;
+  font-weight: bold;
+}
+.bonziworld .bw-cal-day.bw-cal-selected {
+  background: #fff;
+  border-color: var(--g2);
+  cursor: pointer;
+}
+.bonziworld .bw-cal-day:not(.bw-cal-other) {
+  cursor: pointer;
+}
+.bonziworld .bw-calendar-bonzi {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  pointer-events: none;
+}
+.bonziworld .bw-calendar-mascot {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+}
+.bonziworld .bw-calendar-speech {
+  max-width: 140px;
+  padding: 6px 8px;
+  font-size: 10px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.bonziworld .bw-calendar-speech::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 12px;
+  border: 8px solid transparent;
+  border-right-color: #fff;
+  border-left: none;
+}
+.bonziworld .bw-calendar-right {
+  width: 220px;
+  min-width: 220px;
+  border-left: 1px solid var(--g2);
+  display: flex;
+  flex-direction: column;
+}
+.bonziworld .bw-calendar-schedule-title {
+  padding: 6px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  background: var(--g);
+  border-bottom: 1px solid var(--g2);
+}
+.bonziworld .bw-calendar-schedule-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.bonziworld .bw-calendar-schedule-header {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  background: #e0e0e0;
+  border-bottom: 1px solid var(--g2);
+}
+.bonziworld .bw-calendar-schedule-body {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  margin: 8px;
+  margin-top: 0;
+}
+.bonziworld .bw-calendar-schedule-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-bottom: 1px solid #eee;
+}
+.bonziworld .bw-calendar-schedule-row:last-child { border-bottom: none; }
+.bonziworld .bw-calendar-buttons {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--g2);
+  background: var(--g);
+}
+.bonziworld .bw-calendar-buttons .bw-wood-btn {
+  width: auto;
+  padding: 4px 12px;
+}
+
+/* Documentation window */
+.bonziworld .bw-docs-wrap {
+  margin: 0 8px 8px 8px;
+}
+.bonziworld .bw-docs-window {
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  overflow: hidden;
+}
+.bonziworld .bw-docs-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #58b4e8 100%);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.bonziworld .bw-docs-body {
+  padding: 16px 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+}
+.bonziworld .bw-docs-body h2 {
+  font-size: 14px;
+  margin: 1.2em 0 0.5em;
+  color: #000;
+  border-bottom: 1px solid var(--g2);
+  padding-bottom: 4px;
+}
+.bonziworld .bw-docs-body h2:first-child { margin-top: 0; }
+.bonziworld .bw-docs-body h3 { font-size: 12px; margin: 0.75em 0 0.35em; font-weight: bold; }
+.bonziworld .bw-docs-toc {
+  margin-bottom: 1em;
+  padding: 10px 12px;
+  background: var(--g3);
+  border: 1px solid;
+  border-color: var(--g2) var(--w) var(--w) var(--g2);
+  font-size: 12px;
+}
+.bonziworld .bw-docs-toc ol { margin: 0.35em 0 0; padding-left: 1.5em; }
+.bonziworld .bw-docs-toc li { margin: 0.2em 0; }
+.bonziworld .bw-docs-body p { margin: 0.5em 0; }
+.bonziworld .bw-docs-body ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+.bonziworld .bw-docs-body li { margin: 0.25em 0; }
+.bonziworld .bw-docs-body a {
+  color: #000080;
+  text-decoration: underline;
+}
+.bonziworld .bw-docs-body a:hover { color: #1084d0; }
+.bonziworld .bw-docs-buttons {
+  padding: 8px 10px;
+  border-top: 1px solid var(--g2);
+  background: var(--g);
+}
+.bonziworld .bw-docs-buttons .bw-wood-btn {
+  width: auto;
+  padding: 4px 16px;
+}
+
+/* Frame window (same Win98 style as docs/calendar) */
+.bonziworld .bw-frame-wrap {
+  margin: 0 8px 8px 8px;
+}
+.bonziworld .bw-frame-window {
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  overflow: hidden;
+}
+.bonziworld .bw-frame-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #58b4e8 100%);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.bonziworld .bw-frame-body {
+  min-height: 400px;
+  height: 60vh;
+  background: #fff;
+  border-bottom: 1px solid var(--g2);
+}
+.bonziworld .bw-frame-body iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.bonziworld .bw-frame-buttons {
+  padding: 8px 10px;
+  border-top: 1px solid var(--g2);
+  background: var(--g);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.bonziworld .bw-frame-buttons .bw-wood-btn,
+.bonziworld .bw-frame-buttons a.bw-wood-btn {
+  width: auto;
+  padding: 4px 16px;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+/* Download window (Get Started) — same Win98 style */
+.bonziworld .bw-download-wrap {
+  margin: 0 8px 8px 8px;
+}
+.bonziworld .bw-download-window {
+  background: var(--g);
+  border: 1px solid;
+  border-color: var(--g2) var(--w2) var(--w2) var(--g2);
+  overflow: hidden;
+}
+.bonziworld .bw-download-title-bar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #58b4e8 100%);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+.bonziworld .bw-download-body {
+  padding: 16px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+}
+.bonziworld .bw-download-body p { margin: 0.5em 0; }
+.bonziworld .bw-download-body ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+.bonziworld .bw-download-body li { margin: 0.25em 0; }
+.bonziworld .bw-download-buttons {
+  padding: 8px 10px;
+  border-top: 1px solid var(--g2);
+  background: var(--g);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.bonziworld .bw-download-buttons .bw-wood-btn,
+.bonziworld .bw-download-buttons a.bw-wood-btn {
+  width: auto;
+  padding: 4px 16px;
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "bonzibuddi",
+  "version": "1.0.0",
+  "description": "Bonzi Buddy — browser companion",
+  "private": true,
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Bonzi Buddy!</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles/bonzi-theme.css">
+</head>
+<body class="bonzi-theme bonziworld">
+  <div class="bw-window">
+    <!-- Title bar -->
+    <header class="bw-title-bar">
+      <img src="assets/bonzi-title.png" alt="" class="bw-title-icon" width="36" height="36">
+      <span class="bw-title-text">Welcome to Bonzi Buddy!</span>
+      <div class="bw-win-buttons">
+        <span class="bw-win-btn">−</span>
+        <span class="bw-win-btn">□</span>
+        <span class="bw-win-btn">×</span>
+      </div>
+    </header>
+
+    <!-- Jungle banner -->
+    <div class="bw-jungle-banner">
+      <span>Because it's a Jungle Out There!</span>
+      <a href="https://pump.fun/coin/31F25nR1cn9erDKT2STxoYaN6bnkot8yAeM8vNHapump" target="_blank" rel="noopener" class="bw-wood-btn">Check out $Buddy on pump.fun</a>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="bw-toolbar">
+      <span class="bw-logo">BONZI.COM™</span>
+    </div>
+
+    <!-- Sidebar + content -->
+    <div class="bw-body">
+      <aside class="bw-sidebar">
+        <a href="#welcome" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Home" data-frame-url="">Home</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Entertainment" data-frame-url="https://en.wikipedia.org/wiki/Portal:Arts">Entertainment</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Sports" data-frame-url="https://en.wikipedia.org/wiki/Portal:Sports">Sports</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Travel" data-frame-url="https://en.wikivoyage.org/wiki/Main_Page">Travel</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Shopping" data-frame-url="https://en.wikipedia.org/wiki/Online_shopping">Shopping</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Games" data-frame-url="https://en.wikipedia.org/wiki/Portal:Video_games">Games</a>
+        <a href="#" class="bw-wood-btn bw-sidebar-nav" data-frame-title="Finance" data-frame-url="https://en.wikipedia.org/wiki/Portal:Business_and_economics">Finance</a>
+        <div class="bw-sidebar-icons">
+          <a href="https://x.com/bonzi_buddy_sol" target="_blank" rel="noopener" class="bw-icon-cell">
+            <span style="font-size:20px">🐦</span>
+            <span>Twitter</span>
+          </a>
+          <div class="bw-icon-cell">
+            <span style="font-size:20px">🦍🦍🦍</span>
+            <span>Buddies Online</span>
+          </div>
+          <a href="#" class="bw-icon-cell bw-calendar-btn" id="calendar-btn" role="button">
+            <span style="font-size:20px">📅</span>
+            <span>Calendar</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="bw-main">
+        <div class="bw-main-tabs">
+          <span class="bw-tab active" data-tab="search">Search & Explore</span>
+          <span class="bw-tab" data-tab="ask">Ask Me To...</span>
+          <span class="bw-tab" data-tab="money">Save You Money</span>
+        </div>
+        <div class="bw-main-content">
+        <!-- Panel: Search & Explore -->
+        <div class="bw-panel" id="panel-search">
+        <p class="bw-share-text">Share Me with Friends</p>
+
+        <!-- Welcome / hero -->
+        <section class="bw-welcome-block" id="welcome">
+          <img src="assets/bonzi-hero.png" alt="Bonzi" class="bw-hero-mascot" width="240" height="264">
+          <h1>Take a minute... and make a friend for life!</h1>
+          <p>Welcome to the world of Bonzi Buddy! He will explore the Internet with you: talk, joke, search, and help.</p>
+          <button type="button" class="bonzi-btn" id="learn-more-btn">Learn more</button>
+        </section>
+
+        <hr class="bw-hr">
+
+        <!-- Gorilla grid -->
+        <div class="bw-gorilla-grid" id="grid">
+          <div class="bw-gorilla-cell">
+            <img src="assets/speak.png" alt="Speak">
+            <a href="#">Speak...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/sing-songs.png" alt="Sing Songs">
+            <a href="#">Sing Songs...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/tell-a-joke.png" alt="Tell a Joke">
+            <a href="#">Tell a Joke...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/tell-amazing-fact.png" alt="Tell an Amazing Fact">
+            <a href="#">Tell an Amazing Fact...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/talk-to-me.png" alt="Talk to Me">
+            <span class="bw-action">Talk to Me...</span>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/play-video-audio.png" alt="Play Video & Audio">
+            <a href="#">Play Video & Audio...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/read-stories.png" alt="Read Stories">
+            <a href="#">Read Stories...</a>
+          </div>
+          <div class="bw-gorilla-cell">
+            <img src="assets/download-files.png" alt="Download Files">
+            <a href="#">Download Files...</a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="bw-cta-panel">
+          <h2>Ready to meet?</h2>
+          <p>Join in — Bonzi Buddy is waiting for you.</p>
+          <button type="button" class="bonzi-btn" id="get-started-btn">Get Started</button>
+        </div>
+        </div>
+
+        <!-- Panel: Ask Me To... (chat) -->
+        <div class="bw-panel bw-panel-hidden" id="panel-ask">
+          <div class="bw-ask-wrap">
+            <h2 class="bw-ask-title">Chat with Bonzi Buddy</h2>
+            <p class="bw-ask-desc">Type below or use the microphone. Buddy will reply with text and voice!</p>
+            <div class="bw-ask-chat" id="ask-chat">
+              <div class="bw-ask-chat-messages" id="ask-chat-messages">
+                <div class="bw-ask-msg bw-msg-buddy" data-role="buddy">
+                  <div class="bw-ask-msg-avatar">
+                    <img src="assets/bonzi-hero.png" alt="Buddy" class="bw-ask-mascot">
+                  </div>
+                  <div class="bw-ask-msg-bubble">
+                    <p>Hey! I'm Bonzi Buddy. Ask me anything — tell me a joke, what I can do, or just say hi. Type below or use the mic!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bw-ask-row">
+              <input type="text" id="ask-input" class="bw-ask-input" placeholder="Type your message..." maxlength="200" autocomplete="off">
+              <button type="button" class="bonzi-btn" id="ask-btn">Send</button>
+              <button type="button" class="bonzi-btn bw-ask-voice-btn" id="ask-voice-btn" title="Talk to Buddy (voice)">🎤 Voice</button>
+              <span class="bw-ask-voice-status" id="ask-voice-status" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Save You Money -->
+        <div class="bw-panel bw-panel-hidden" id="panel-money">
+          <p class="bw-share-text">Save You Money</p>
+          <div class="bw-money-hero">
+            <img src="assets/buddy-cool.png" alt="Buddy" class="bw-money-mascot" width="200" height="240">
+            <div class="bw-money-side">
+              <dl class="bw-money-info">
+                <dt>Name:</dt>
+                <dd>Bonzi Buddy</dd>
+                <dt>Ticker:</dt>
+                <dd>$Buddy</dd>
+                <dt>CA:</dt>
+                <dd class="bw-money-ca">31F25nR1cn9erDKT2STxoYaN6bnkot8yAeM8vNHapump</dd>
+                <dt>Pump.Fun:</dt>
+                <dd><a href="https://pump.fun/coin/31F25nR1cn9erDKT2STxoYaN6bnkot8yAeM8vNHapump" target="_blank" rel="noopener">pump.fun/coin/…</a></dd>
+                <dt>Twitter:</dt>
+                <dd><a href="https://x.com/bonzi_buddy_sol" target="_blank" rel="noopener">x.com/bonzi_buddy_sol</a></dd>
+              </dl>
+              <p class="bw-money-text">If you want to save your money, invest in the best token called <strong>$Buddy</strong>.</p>
+            </div>
+          </div>
+          <div class="bw-money-chart-wrap">
+            <div class="bw-money-chart-title">Buddy/Sol</div>
+            <div class="bw-money-chart">
+              <iframe id="buddy-chart-iframe" title="Buddy/Sol chart" src="https://www.tradingview.com/widgetembed/?frameElementId=buddy-chart-iframe&symbol=BUDDY%2FSOL&interval=D&hidesidebar=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%5D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=localhost&utm_medium=widget&utm_campaign=chart&theme=light" allowtransparency="true" scrolling="no"></iframe>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Bonzi's Calendar — opens only when Calendar button is clicked -->
+        <section class="bw-calendar-wrap bw-calendar-hidden" id="calendar">
+          <div class="bw-calendar-window">
+            <div class="bw-calendar-title-bar">Bonzi's Calendar</div>
+            <p class="bw-calendar-intro">I can help keep you on schedule. Simply add your appointments and special events into my calendar below. I will remind you when they are near.</p>
+            <div class="bw-calendar-body">
+              <div class="bw-calendar-left">
+                <div class="bw-calendar-controls">
+                  <select id="cal-month" class="bw-calendar-select" aria-label="Month"></select>
+                  <select id="cal-year" class="bw-calendar-select" aria-label="Year"></select>
+                </div>
+                <div class="bw-calendar-weekdays">
+                  <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                </div>
+                <div class="bw-calendar-grid" id="cal-grid"></div>
+                <div class="bw-calendar-bonzi">
+                  <img src="assets/bonzi-hero.png" alt="Bonzi" class="bw-calendar-mascot">
+                  <div class="bw-calendar-speech">We need to remember to 'Pick up a Movie for tonight!'</div>
+                </div>
+              </div>
+              <div class="bw-calendar-right">
+                <div class="bw-calendar-schedule-title">Schedule for <span id="cal-schedule-date">--/--/----</span></div>
+                <div class="bw-calendar-schedule-table">
+                  <div class="bw-calendar-schedule-header">
+                    <span>Time</span>
+                    <span>Description</span>
+                  </div>
+                  <div class="bw-calendar-schedule-body" id="cal-schedule-body">
+                    <div class="bw-calendar-schedule-row">
+                      <span>12:00 PM</span>
+                      <span>Pick up a Movie for tonight</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bw-calendar-buttons">
+              <button type="button" class="bw-wood-btn">Add</button>
+              <button type="button" class="bw-wood-btn">Edit</button>
+              <button type="button" class="bw-wood-btn">Delete</button>
+              <button type="button" class="bw-wood-btn" id="calendar-close-btn">Close</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Documentation — opens when Learn more is clicked -->
+        <section class="bw-docs-wrap bw-docs-hidden" id="docs">
+          <div class="bw-docs-window">
+            <div class="bw-docs-title-bar">Documentation — Bonzi Buddy</div>
+            <div class="bw-docs-body">
+              <nav class="bw-docs-toc" aria-label="Documentation contents">
+                <strong>Contents:</strong>
+                <ol>
+                  <li><a href="#doc-about">About the Project</a></li>
+                  <li><a href="#doc-summary">Executive Summary</a></li>
+                  <li><a href="#doc-capabilities">What Bonzi Buddy Can Do</a></li>
+                  <li><a href="#doc-history">History & Legacy</a></li>
+                  <li><a href="#doc-early-ai">Why BonziBuddy Was an Early "AI Agent"</a></li>
+                  <li><a href="#doc-features">Features in Detail</a></li>
+                  <li><a href="#doc-ui">User Interface & Design System</a></li>
+                  <li><a href="#doc-architecture">Architecture & Technical Overview</a></li>
+                  <li><a href="#doc-technology">Technology Stack</a></li>
+                  <li><a href="#doc-security">Security & Privacy</a></li>
+                  <li><a href="#doc-compat">Compatibility & Browser Support</a></li>
+                  <li><a href="#doc-roadmap">Roadmap & Future Development</a></li>
+                  <li><a href="#doc-comparison">Comparison: Original vs Bonzi Buddy</a></li>
+                  <li><a href="#doc-glossary">Glossary</a></li>
+                  <li><a href="#doc-faq">Frequently Asked Questions</a></li>
+                  <li><a href="#doc-links">Links & Resources</a></li>
+                  <li><a href="#doc-credits">Credits & License</a></li>
+                </ol>
+              </nav>
+
+              <h2 id="doc-about">1. About the Project</h2>
+              <p>Bonzi Buddy is a full reimagining of the classic BonziBuddy experience: a friendly, interactive companion that runs entirely in your browser. This project revives the spirit of one of the earliest “AI-like” virtual assistants—the original BonziBuddy, released in 1999—and presents it as a modern, transparent, and nostalgia-driven web experience with no adware, no tracking, and no legacy baggage. The goal is to preserve the character, the tone, and the idea of a persistent desktop companion while making it safe, open, and enjoyable for today's users and developers.</p>
+
+              <h2 id="doc-summary">2. Executive Summary</h2>
+              <p>Bonzi Buddy provides a browser-based replica of the BonziBuddy interface and feature set: speech, jokes, facts, songs, calendar, and a conversational "Ask Me To…" panel. The UI faithfully reproduces the Windows 98 / BonziWORLD aesthetic. All logic runs client-side; no backend or user tracking is required.</p>
+
+              <h2 id="doc-capabilities">3. What Bonzi Buddy Can Do</h2>
+              <p>Bonzi Buddy is designed as a versatile companion with a clear set of capabilities:</p>
+              <ul>
+                <li><strong>Speak</strong> — Interactive dialogue and responses in character.</li>
+                <li><strong>Sing Songs</strong> — Musical and entertaining interactions.</li>
+                <li><strong>Tell a Joke</strong> — Humor and light-hearted content.</li>
+                <li><strong>Tell an Amazing Fact</strong> — Trivia and educational snippets.</li>
+                <li><strong>Talk to Me</strong> — Conversational “Ask Me To…” interface with a built-in answer database.</li>
+                <li><strong>Play Video & Audio</strong> — Media playback support.</li>
+                <li><strong>Read Stories</strong> — Narrative and story-based content.</li>
+                <li><strong>Download Files</strong> — Assistance with file handling concepts.</li>
+              </ul>
+              <p>In addition, <strong>Bonzi’s Calendar</strong> helps you stay on schedule with a classic calendar UI and event reminders.</p>
+
+              <h2 id="doc-history">4. History & Legacy — The Original BonziBuddy</h2>
+              <p>The original <strong>BonziBuddy</strong> was a freeware desktop virtual assistant created by Joe and Jay Bonzi and first released in <strong>1999</strong>. It used <strong>Microsoft Agent</strong> technology—the same platform behind the famous “Clippy” and other Office Assistants—and featured an animated character that could talk, tell jokes, sing, and perform tasks.</p>
+              <p>Initially the software used Peedy (a green parrot from Microsoft’s default Agent set); later, Bonzi Software introduced the iconic <strong>purple gorilla</strong> character that became synonymous with the brand. The character could speak via text-to-speech, respond to user choices, and present a friendly, persistent presence on the user’s desktop.</p>
+              <p>In that sense, BonziBuddy was a <strong>very early form of an “AI agent”</strong>—long before modern chatbots and LLMs. It combined a visible persona, scripted interactions, and simple automation in a way that felt personal and assistive. Although the original program was later classified as adware and spyware and discontinued around 2004–2005, its concept—a conversational, character-based assistant—remains relevant today.</p>
+              <h3>4.1 Timeline</h3>
+              <ul>
+                <li><strong>1999</strong> — BonziBuddy launched; initially used Peedy (green parrot) from Microsoft's default Agent set.</li>
+                <li><strong>2000–2001</strong> — Purple gorilla character and BonziWORLD branding introduced.</li>
+                <li><strong>2002–2004</strong> — Widespread use; classification as adware/spyware; lawsuits.</li>
+                <li><strong>2004–2005</strong> — Discontinuation; Bonzi.com hosted briefly.</li>
+                <li><strong>2008</strong> — Bonzi.com portal closed.</li>
+              </ul>
+              <h3>4.2 Microsoft Agent</h3>
+              <p>Microsoft Agent was a runtime for animated characters with text-to-speech and optional speech recognition. It shipped with Windows 2000 through Vista and was deprecated by the Windows 8 era.</p>
+              <h3>4.3 Cultural Impact</h3>
+              <p>BonziBuddy became one of the most recognizable early "virtual assistant" products and later a symbol of deceptive adware. Its mascot and tagline remain part of internet nostalgia.</p>
+
+              <h2 id="doc-early-ai">5. Why BonziBuddy Was an Early "AI Agent"</h2>
+              <p>Long before modern chatbots and LLMs, BonziBuddy embodied ideas now central to AI agents: a <strong>persistent persona</strong>, <strong>conversational interface</strong>, <strong>proactive assistance</strong> (reminders, downloads, search), and <strong>scripted intelligence</strong> that felt responsive. Bonzi Buddy keeps that spirit with a curated answer set and transparent design.</p>
+
+              <h2 id="doc-features">6. Features in Detail</h2>
+              <h3>6.1 Ask Me To…</h3>
+              <p>Dedicated tab and panel for natural-language questions. Responses from an in-page answer database (keyword matching) with default fallback. All answers in Bonzi Buddy's voice. No server round-trip.</p>
+              <h3>6.2 Bonzi’s Calendar</h3>
+              <p>Opened via the sidebar Calendar control. Month/year dropdowns, day grid, current-date highlighting, Schedule for MM/DD/YYYY with Time and Description columns. Dates actualized to the user's current date; click a day to update the schedule header.</p>
+              <h3>6.3 Search & Explore</h3>
+              <p>Main view: hero with mascot, Learn more (opens this documentation), and a grid of eight action cells—Speak, Sing Songs, Tell a Joke, Tell an Amazing Fact, Talk to Me, Play Video & Audio, Read Stories, Download Files—each with a distinct image and label.</p>
+              <h3>6.4 Save You Money</h3>
+              <p>Reserved for future expansion (e.g. price comparison, deals). Placeholder content in tab.</p>
+              <h3>6.5 Classic UI & Design System</h3>
+              <p>The interface replicates late-1990s / early-2000s desktop software: blue gradient title bar, grey 3D beveled borders (raised/sunken), wooden-style sidebar buttons, jungle banner, status bar. Typography and spacing follow a consistent Win98-inspired system.</p>
+              <h3>6.6 Responsive Behavior</h3>
+              <p>Layout adapts to viewport width (e.g. gorilla grid collapses to fewer columns on narrow screens) while preserving the retro aesthetic.</p>
+
+              <h2 id="doc-ui">7. User Interface & Design System</h2>
+              <p>Two border patterns: <strong>Raised</strong> (light top/left, dark bottom/right) for buttons and active tabs; <strong>Sunken</strong> (dark top/left, light bottom/right) for content panels and inputs. Grey palette, blue gradient title bar, green jungle banner. No border-radius on controls.</p>
+
+              <h2 id="doc-architecture">8. Architecture & Technical Overview</h2>
+              <p>Single-page application: one HTML file, one CSS file, inline scripts for calendar, tabs, Ask Me To…, and doc/calendar open/close. State via CSS classes. Ask Me To… uses a static keyword-to-answer array; calendar uses the browser Date object.</p>
+
+              <h2 id="doc-technology">9. Technology Stack</h2>
+              <p>HTML5—semantic structure, accessible form controls and landmarks. CSS3—variables, Grid, Flexbox, gradients, borders; no preprocessor. Vanilla JavaScript—no frameworks; event-driven logic for tabs, calendar, docs, and Q&A. Assets—PNG/SVG for mascot and action icons; optional webfonts (e.g. Tahoma) for period-accurate typography. No server, no cookies, no analytics, no third-party scripts for core functionality.</p>
+
+              <h2 id="doc-security">10. Security & Privacy</h2>
+              <p>No collection, storage, or transmission of personal data. All interactions in-browser. No external API calls for the default feature set. Self-hostable and auditable.</p>
+
+              <h2 id="doc-compat">11. Compatibility & Browser Support</h2>
+              <p>Current evergreen browsers (Chrome, Firefox, Safari, Edge). Standard CSS Grid/Flexbox and DOM APIs. Graceful degradation if script is disabled.</p>
+
+              <h2 id="doc-roadmap">12. Roadmap & Future Development</h2>
+              <ul>
+                <li>Expand Ask Me To… answer database and categorization.</li>
+                <li>Implement Save You Money (deals, price comparison).</li>
+                <li>Optional sound effects or TTS.</li>
+                <li>Localization for UI and docs.</li>
+                <li>Calendar export/import or sync (local storage or backend).</li>
+              </ul>
+
+              <h2 id="doc-comparison">13. Comparison: Original vs Bonzi Buddy</h2>
+              <p><strong>Platform:</strong> Original — Windows (Microsoft Agent). Bonzi Buddy — Web. <strong>Distribution:</strong> Original — .exe/.acs. Bonzi Buddy — Static HTML/CSS/JS. <strong>Conversation:</strong> Original — Scripted + TTS. Bonzi Buddy — Keyword answer set + fallback. <strong>Privacy:</strong> Original — Adware/spyware. Bonzi Buddy — No tracking.</p>
+
+              <h2 id="doc-glossary">14. Glossary</h2>
+              <ul>
+                <li><strong>Microsoft Agent</strong> — Legacy Microsoft tech for animated, speech-enabled characters (1990s–2000s).</li>
+                <li><strong>BonziWORLD</strong> — Branded UI theme (jungle, purple gorilla).</li>
+                <li><strong>Double Agent</strong> — Community replacement for Microsoft Agent; used in GitHub BonziBuddy reimplementation.</li>
+                <li><strong>.acs</strong> — Microsoft Agent character file format.</li>
+              </ul>
+
+              <h2 id="doc-faq">15. Frequently Asked Questions</h2>
+              <p><strong>Is Bonzi Buddy the same as BonziBuddy?</strong> No. Independent web-based tribute; not affiliated with original Bonzi Software.</p>
+              <p><strong>Does Bonzi Buddy collect data?</strong> Reference implementation does not; check host policy for any instance.</p>
+              <p><strong>Where can I run original-style BonziBuddy safely?</strong> Spyware-free reimplementation on GitHub (lethargiesleeps/BonziBuddy) using Double Agent on Windows.</p>
+
+              <h2 id="doc-links">16. Links & Resources</h2>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/BonziBuddy" target="_blank" rel="noopener">BonziBuddy (Wikipedia)</a> — History and legacy.</li>
+                <li><a href="https://github.com/lethargiesleeps/BonziBuddy" target="_blank" rel="noopener">BonziBuddy on GitHub</a> — Spyware-free reimplementation, WinForms + Double Agent (AGPL-3.0).</li>
+                <li><a href="https://en.wikipedia.org/wiki/Microsoft_Agent" target="_blank" rel="noopener">Microsoft Agent (Wikipedia)</a> — Original animated assistant tech.</li>
+                <li><a href="https://web.archive.org/web/*/bonzibuddy.org" target="_blank" rel="noopener">BonziBuddy (Wayback Machine)</a> — Archived original site.</li>
+              </ul>
+
+              <h2 id="doc-credits">17. Credits & License</h2>
+              <p>Bonzi Buddy is a fan project inspired by BonziBuddy (Bonzi Software, 1999–2005). BonziBuddy name and character are trademarks of their respective owners. For educational and nostalgic use. Spyware-free desktop version: see GitHub project above (AGPL-3.0).</p>
+              <p><em>Bonzi Buddy — Take a minute, and make a friend for life.</em></p>
+            </div>
+            <div class="bw-docs-buttons">
+              <button type="button" class="bw-wood-btn" id="docs-close-btn">Close</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sidebar links window (Entertainment, Sports, Travel, etc.) — same Win98 style -->
+        <section class="bw-frame-wrap bw-frame-hidden" id="frame-window">
+          <div class="bw-frame-window">
+            <div class="bw-frame-title-bar" id="frame-title-bar">— Bonzi Buddy</div>
+            <div class="bw-frame-body">
+              <iframe id="frame-iframe" title="External content" src="about:blank"></iframe>
+            </div>
+            <div class="bw-frame-buttons">
+              <a href="#" target="_blank" rel="noopener" id="frame-open-external" class="bw-wood-btn">Open in new tab</a>
+              <button type="button" class="bw-wood-btn" id="frame-close-btn">Close</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Download window (Get Started) — system requirements + download -->
+        <section class="bw-download-wrap bw-download-hidden" id="download-window">
+          <div class="bw-download-window">
+            <div class="bw-download-title-bar">BonziBuddy — System Requirements</div>
+            <div class="bw-download-body">
+              <p><strong>To run BonziBuddy (desktop version), your system should meet:</strong></p>
+              <ul>
+                <li><strong>OS:</strong> Windows 98 / ME / 2000 / XP / Vista (or use the spyware-free reimplementation on Windows 10/11)</li>
+                <li><strong>Processor:</strong> 133 MHz or higher</li>
+                <li><strong>RAM:</strong> 32 MB minimum (64 MB or more recommended)</li>
+                <li><strong>Disk space:</strong> ~5 MB for installation</li>
+                <li><strong>Other:</strong> Microsoft Agent runtime (or Double Agent for modern Windows), sound card for speech</li>
+              </ul>
+              <p>Download the archive below and follow the instructions inside.</p>
+            </div>
+            <div class="bw-download-buttons">
+              <a href="bon4.zip" download="bon4.zip" class="bw-wood-btn">Download</a>
+              <button type="button" class="bw-wood-btn" id="download-close-btn">Close</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer / status bar -->
+    <footer class="bw-footer-bar">
+      <a href="#">Help</a>
+      <a href="#">Options</a>
+      <a href="#">Update Me</a>
+      <span>Quiet Mode (Off) - F9</span>
+      <button type="button">Hide</button>
+      <button type="button">Goodbye</button>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var today = new Date();
+      var curMonth = today.getMonth();
+      var curYear = today.getFullYear();
+      var curDay = today.getDate();
+
+      var monthSelect = document.getElementById('cal-month');
+      var yearSelect = document.getElementById('cal-year');
+      var gridEl = document.getElementById('cal-grid');
+      var scheduleDateEl = document.getElementById('cal-schedule-date');
+
+      months.forEach(function(m, i) {
+        var opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = m;
+        if (i === curMonth) opt.selected = true;
+        monthSelect.appendChild(opt);
+      });
+      for (var y = curYear - 2; y <= curYear + 2; y++) {
+        var opt = document.createElement('option');
+        opt.value = y;
+        opt.textContent = y;
+        if (y === curYear) opt.selected = true;
+        yearSelect.appendChild(opt);
+      }
+
+      function buildCalendar(month, year) {
+        gridEl.innerHTML = '';
+        var first = new Date(year, month, 1);
+        var last = new Date(year, month + 1, 0);
+        var startDay = first.getDay();
+        var daysInMonth = last.getDate();
+        var prevMonth = new Date(year, month, 0);
+        var prevDays = prevMonth.getDate();
+        var cells = [];
+        for (var i = 0; i < startDay; i++) {
+          cells.push({ day: prevDays - startDay + i + 1, other: true });
+        }
+        for (var d = 1; d <= daysInMonth; d++) {
+          cells.push({ day: d, other: false, today: (d === curDay && month === curMonth && year === curYear) });
+        }
+        var next = 1;
+        while (cells.length % 7 !== 0) {
+          cells.push({ day: next++, other: true });
+        }
+        cells.forEach(function(c) {
+          var cell = document.createElement('div');
+          cell.className = 'bw-cal-day' + (c.other ? ' bw-cal-other' : '') + (c.today ? ' bw-cal-today bw-cal-selected' : '');
+          cell.textContent = c.day;
+          if (c.today) cell.setAttribute('title', 'Today');
+          gridEl.appendChild(cell);
+        });
+      }
+
+      function setScheduleDate(month, year, day) {
+        var m = (month + 1).toString().padStart(2, '0');
+        var d = day.toString().padStart(2, '0');
+        scheduleDateEl.textContent = m + '/' + d + '/' + year;
+      }
+
+      buildCalendar(curMonth, curYear);
+      setScheduleDate(curMonth, curYear, curDay);
+
+      monthSelect.addEventListener('change', function() {
+        buildCalendar(parseInt(monthSelect.value, 10), parseInt(yearSelect.value, 10));
+      });
+      yearSelect.addEventListener('change', function() {
+        buildCalendar(parseInt(monthSelect.value, 10), parseInt(yearSelect.value, 10));
+      });
+      gridEl.addEventListener('click', function(e) {
+        var cell = e.target.closest('.bw-cal-day');
+        if (!cell || cell.classList.contains('bw-cal-other')) return;
+        var day = parseInt(cell.textContent, 10);
+        var month = parseInt(monthSelect.value, 10);
+        var year = parseInt(yearSelect.value, 10);
+        setScheduleDate(month, year, day);
+        document.querySelectorAll('.bw-cal-day.bw-cal-selected').forEach(function(c){ c.classList.remove('bw-cal-selected'); });
+        cell.classList.add('bw-cal-selected');
+      });
+    })();
+
+    // Calendar: open only when Calendar button clicked, close with Close button
+    (function() {
+      var main = document.querySelector('.bw-main');
+      var calendarBtn = document.getElementById('calendar-btn');
+      var calendarCloseBtn = document.getElementById('calendar-close-btn');
+      if (calendarBtn) {
+        calendarBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          main.classList.remove('bw-main-docs-open');
+          main.classList.remove('bw-main-frame-open');
+          main.classList.remove('bw-main-download-open');
+          main.classList.add('bw-main-calendar-open');
+        });
+      }
+      if (calendarCloseBtn) {
+        calendarCloseBtn.addEventListener('click', function() {
+          main.classList.remove('bw-main-calendar-open');
+        });
+      }
+    })();
+
+    // Docs: open when Learn more clicked, close with Close button
+    (function() {
+      var main = document.querySelector('.bw-main');
+      var learnMoreBtn = document.getElementById('learn-more-btn');
+      var docsCloseBtn = document.getElementById('docs-close-btn');
+      if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          main.classList.remove('bw-main-calendar-open');
+          main.classList.remove('bw-main-frame-open');
+          main.classList.remove('bw-main-download-open');
+          main.classList.add('bw-main-docs-open');
+        });
+      }
+      if (docsCloseBtn) {
+        docsCloseBtn.addEventListener('click', function() {
+          main.classList.remove('bw-main-docs-open');
+        });
+      }
+    })();
+
+    // Sidebar nav: Home / Entertainment / Sports / Travel / Shopping / Games / Finance
+    (function() {
+      var main = document.querySelector('.bw-main');
+      var titleBar = document.getElementById('frame-title-bar');
+      var iframe = document.getElementById('frame-iframe');
+      var openExternal = document.getElementById('frame-open-external');
+      var frameCloseBtn = document.getElementById('frame-close-btn');
+      var navBtns = document.querySelectorAll('.bw-sidebar-nav');
+
+      function closeFrame() {
+        main.classList.remove('bw-main-frame-open');
+        if (iframe) iframe.src = 'about:blank';
+      }
+
+      navBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var url = (this.getAttribute('data-frame-url') || '').trim();
+          var title = this.getAttribute('data-frame-title') || '';
+
+          if (!url) {
+            closeFrame();
+            main.classList.remove('bw-main-docs-open');
+            main.classList.remove('bw-main-calendar-open');
+            var welcome = document.getElementById('welcome');
+            if (welcome) welcome.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
+
+          main.classList.remove('bw-main-docs-open');
+          main.classList.remove('bw-main-calendar-open');
+          main.classList.remove('bw-main-download-open');
+          if (titleBar) titleBar.textContent = title + ' — Bonzi Buddy';
+          if (iframe) iframe.src = url;
+          if (openExternal) {
+            openExternal.href = url;
+            openExternal.textContent = 'Open in new tab';
+          }
+          main.classList.add('bw-main-frame-open');
+        });
+      });
+
+      if (frameCloseBtn) {
+        frameCloseBtn.addEventListener('click', function() {
+          closeFrame();
+        });
+      }
+    })();
+
+    // Get Started: open download window (system requirements + Download bon4.zip)
+    (function() {
+      var main = document.querySelector('.bw-main');
+      var getStartedBtn = document.getElementById('get-started-btn');
+      var downloadCloseBtn = document.getElementById('download-close-btn');
+      if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          main.classList.remove('bw-main-docs-open');
+          main.classList.remove('bw-main-calendar-open');
+          main.classList.remove('bw-main-frame-open');
+          main.classList.add('bw-main-download-open');
+        });
+      }
+      if (downloadCloseBtn) {
+        downloadCloseBtn.addEventListener('click', function() {
+          main.classList.remove('bw-main-download-open');
+        });
+      }
+    })();
+
+    // Tabs: switch panels
+    (function() {
+      var tabs = document.querySelectorAll('.bw-main-tabs .bw-tab');
+      var panels = document.querySelectorAll('.bw-panel');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var t = this.getAttribute('data-tab');
+          tabs.forEach(function(x) { x.classList.toggle('active', x.getAttribute('data-tab') === t); });
+          panels.forEach(function(p) {
+            var pid = p.id;
+            var show = (t === 'search' && pid === 'panel-search') || (t === 'ask' && pid === 'panel-ask') || (t === 'money' && pid === 'panel-money');
+            p.classList.toggle('bw-panel-hidden', !show);
+          });
+        });
+      });
+    })();
+
+    // Ask Bonzi Buddy — basic answer database (answers from Bonzi Buddy)
+    (function() {
+      var bonziAnswers = [
+        { keywords: ['buddy token', '$buddy', 'buy buddy', 'buying the', 'invest', 'worth buying'], answer: "The $Buddy token? I think that's a fun idea — we're buddies, after all! Check out the Save You Money tab for the chart and more. I'm not a financial advisor, but I'm your friend for life!" },
+        { keywords: ['hello', 'hi', 'hey', 'howdy'], answer: "Hey there! I'm Bonzi Buddy and I'm so glad you said hi! What can I do for you today?" },
+        { keywords: ['joke', 'funny', 'laugh'], answer: "I love jokes! Why did the banana go to the doctor? Because it wasn't peeling well! Hee hee! Got any more? I'm always up for a good laugh!" },
+        { keywords: ['what can you do', 'help', 'abilities', 'features'], answer: "I can speak, sing songs, tell jokes, share amazing facts, play video and audio, read stories, and help with downloads! I'm your purple buddy for life!" },
+        { keywords: ['who are you', 'name', 'bonzi'], answer: "I'm Bonzi Buddy! Your friendly purple buddy. I'm here to explore the Internet with you and make things more fun. Nice to meet you!" },
+        { keywords: ['thank', 'thanks'], answer: "You're welcome! That's what friends are for. Anytime you need me, I'm here!" },
+        { keywords: ['bye', 'goodbye', 'see you'], answer: "Aw, goodbye for now! Don't be a stranger — come back and ask me anything. I'll be here!" },
+        { keywords: ['weather', 'rain', 'sunny', 'cold', 'hot'], answer: "I'm no weather gorilla, but I can tell you it's always sunny in my heart when you're around! For real weather, check a weather site — I'll keep you company while you do!" },
+        { keywords: ['time', 'date', 'today'], answer: "I'm not wearing a watch, but you can check your system clock! I'm better at reminders — use my Calendar so we never miss an important date!" },
+        { keywords: ['sing', 'song', 'music'], answer: "I love to sing! Click on 'Sing Songs' up there and we can have a musical moment. I've got a few tunes in me!" },
+        { keywords: ['fact', 'amazing', 'interesting'], answer: "Did you know bananas are berries but strawberries aren't? Wild, right? I've got more where that came from — ask me to tell an amazing fact from the main page!" },
+        { keywords: ['movie', 'film', 'watch'], answer: "Ooh, I love movies! Add 'Pick up a Movie' to my Calendar so we don't forget. Then we can watch together — well, you watch, I'll cheer from the sidelines!" },
+        { keywords: ['schedule', 'calendar', 'remind'], answer: "My Calendar is perfect for that! Scroll down and add your events — I'll help keep you on schedule. Just click Calendar in the sidebar!" }
+      ];
+      var defaultAnswer = "Hmm, I'm not sure I have a perfect answer for that, but I'm here for you! Try asking me something like: what can you do, tell me a joke, or who are you. I do my best!";
+
+      var input = document.getElementById('ask-input');
+      var btn = document.getElementById('ask-btn');
+      var chatMessages = document.getElementById('ask-chat-messages');
+      var voiceBtn = document.getElementById('ask-voice-btn');
+      var voiceStatus = document.getElementById('ask-voice-status');
+
+      function matchKeyword(q, keyword) {
+        if (!q || !keyword) return false;
+        var kw = keyword.toLowerCase();
+        if (kw.indexOf(' ') !== -1) return q.indexOf(kw) !== -1;
+        var escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return new RegExp('\\b' + escaped + '\\b', 'i').test(q);
+      }
+
+      function getReply(question) {
+        var q = (question || '').toLowerCase().trim();
+        if (!q) return "Type something in the box and hit Send! I'm all ears.";
+        for (var i = 0; i < bonziAnswers.length; i++) {
+          var row = bonziAnswers[i];
+          for (var k = 0; k < row.keywords.length; k++) {
+            if (matchKeyword(q, row.keywords[k])) return row.answer;
+          }
+        }
+        return defaultAnswer;
+      }
+
+      function escapeHtml(s) {
+        return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function speak(text) {
+        if (!text || typeof window.speechSynthesis === 'undefined') return;
+        window.speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-US';
+        u.rate = 0.95;
+        var voices = speechSynthesis.getVoices();
+        for (var v = 0; v < voices.length; v++) {
+          if (voices[v].lang.indexOf('en') === 0) { u.voice = voices[v]; break; }
+        }
+        window.speechSynthesis.speak(u);
+      }
+
+      function appendMessage(role, text, speakIt) {
+        if (!chatMessages) return;
+        var msg = document.createElement('div');
+        msg.className = 'bw-ask-msg bw-msg-' + role;
+        msg.setAttribute('data-role', role);
+        if (role === 'buddy') {
+          msg.innerHTML = '<div class="bw-ask-msg-avatar"><img src="assets/bonzi-hero.png" alt="Buddy" class="bw-ask-mascot"></div><div class="bw-ask-msg-bubble"><p>' + escapeHtml(text) + '</p></div>';
+        } else {
+          msg.innerHTML = '<div class="bw-ask-msg-bubble"><p>' + escapeHtml(text) + '</p></div>';
+        }
+        chatMessages.appendChild(msg);
+        var chat = document.getElementById('ask-chat');
+        if (chat) chat.scrollTop = chat.scrollHeight;
+        if (role === 'buddy' && speakIt) speak(text);
+      }
+
+      function sendUserMessage() {
+        var text = (input.value || '').trim();
+        if (!text) return;
+        input.value = '';
+        appendMessage('user', text, false);
+        var reply = getReply(text);
+        appendMessage('buddy', reply, true);
+      }
+
+      btn.addEventListener('click', sendUserMessage);
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          sendUserMessage();
+        }
+      });
+
+      // Voice chat: Web Speech API (Chrome uses Google speech recognition, free)
+      (function() {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition || !voiceBtn) {
+          if (voiceBtn) voiceBtn.style.display = 'none';
+          return;
+        }
+        var recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+
+        function setStatus(s) {
+          if (voiceStatus) voiceStatus.textContent = s;
+        }
+
+        voiceBtn.addEventListener('click', function() {
+          if (recognition._listening) {
+            recognition.stop();
+            return;
+          }
+          setStatus('Listening…');
+          voiceBtn.classList.add('bw-voice-active');
+          recognition._listening = true;
+          recognition.start();
+        });
+
+        recognition.onresult = function(e) {
+          var transcript = (e.results[0] && e.results[0][0]) ? e.results[0][0].transcript : '';
+          if (transcript) {
+            input.value = '';
+            appendMessage('user', transcript, false);
+            var reply = getReply(transcript);
+            appendMessage('buddy', reply, true);
+          }
+          setStatus('');
+          voiceBtn.classList.remove('bw-voice-active');
+          recognition._listening = false;
+        };
+
+        recognition.onend = function() {
+          setStatus('');
+          voiceBtn.classList.remove('bw-voice-active');
+          recognition._listening = false;
+        };
+
+        recognition.onerror = function(e) {
+          if (e.error === 'no-speech') setStatus('No speech heard. Try again!');
+          else if (e.error === 'not-allowed') setStatus('Microphone access denied.');
+          else setStatus('Voice error. Try again.');
+          voiceBtn.classList.remove('bw-voice-active');
+          recognition._listening = false;
+        };
+
+        if (speechSynthesis.getVoices().length === 0) {
+          speechSynthesis.addEventListener('voiceschanged', function() {});
+        }
+      })();
+    })();
+  </script>
+</body>
+</html>

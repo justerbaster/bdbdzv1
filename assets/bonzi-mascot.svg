@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <!-- A=>2=>9 D8>;5B>2K9 3@0485=B (AB8;L Bonzi) -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b7bb8"/>
+      <stop offset="40%" style="stop-color:#7b5a9e"/>
+      <stop offset="100%" style="stop-color:#5a3d7a"/>
+    </linearGradient>
+    <linearGradient id="bellyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b8a0d0"/>
+      <stop offset="100%" style="stop-color:#8b6cad"/>
+    </linearGradient>
+    <linearGradient id="earGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b6cad"/>
+      <stop offset="100%" style="stop-color:#5a3d7a"/>
+    </linearGradient>
+    <!-- ;8: =0 3;070E -->
+    <radialGradient id="eyeShine" cx="35%" cy="35%" r="40%">
+      <stop offset="0%" style="stop-color:#fff"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+  <!-- "5=L ?>4 <0A:>B>< -->
+  <ellipse cx="100" cy="208" rx="55" ry="10" fill="rgba(0,0,0,0.2)"/>
+  <!-- >38 (A848B) -->
+  <ellipse cx="70" cy="195" rx="28" ry="22" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <ellipse cx="130" cy="195" rx="28" ry="22" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <!-- 82>B (A25B;55) -->
+  <path d="M 55 140 Q 100 185 145 140 L 145 195 Q 100 200 55 195 Z" fill="url(#bellyGrad)" stroke="#6b4a8a" stroke-width="1"/>
+  <!-- "5;> -->
+  <ellipse cx="100" cy="155" rx="52" ry="48" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <!--  C:8 (>:@C3;K5) -->
+  <ellipse cx="48" cy="130" rx="22" ry="28" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <ellipse cx="152" cy="130" rx="22" ry="28" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <!-- >;>20 -->
+  <circle cx="100" cy="85" r="58" fill="url(#bodyGrad)" stroke="#5a3d7a" stroke-width="1.5"/>
+  <!-- #H8 -->
+  <circle cx="48" cy="65" r="22" fill="url(#earGrad)" stroke="#5a3d7a" stroke-width="1"/>
+  <circle cx="152" cy="65" r="22" fill="url(#earGrad)" stroke="#5a3d7a" stroke-width="1"/>
+  <!-- >@40 (A25B;55) -->
+  <ellipse cx="100" cy="95" rx="38" ry="42" fill="url(#bellyGrad)"/>
+  <!-- ;070 (15;:8) -->
+  <ellipse cx="78" cy="82" rx="18" ry="22" fill="#fff"/>
+  <ellipse cx="122" cy="82" rx="18" ry="22" fill="#fff"/>
+  <!-- @0G:8 -->
+  <circle cx="82" cy="88" r="10" fill="#1a1a2e"/>
+  <circle cx="118" cy="88" r="10" fill="#1a1a2e"/>
+  <!-- ;8:8 2 3;070E -->
+  <ellipse cx="86" cy="84" rx="5" ry="6" fill="url(#eyeShine)"/>
+  <ellipse cx="122" cy="84" rx="5" ry="6" fill="url(#eyeShine)"/>
+  <!-- #;K1:0 -->
+  <path d="M 72 108 Q 100 122 128 108" fill="none" stroke="#4a2d5a" stroke-width="3" stroke-linecap="round"/>
+  <!-- >74@8 (<0;5=L:85) -->
+  <ellipse cx="92" cy="102" rx="4" ry="3" fill="#4a2d5a"/>
+  <ellipse cx="108" cy="102" rx="4" ry="3" fill="#4a2d5a"/>
+</svg>
